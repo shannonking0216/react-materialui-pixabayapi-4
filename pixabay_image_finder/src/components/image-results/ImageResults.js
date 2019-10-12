@@ -7,6 +7,11 @@ import Dialog from "material-ui/Dialog";
 import FlatButton from "material-ui/FlatButton";
 
 class ImageResults extends Component {
+    state = {
+        open: false,
+        currentImg: ''
+    }
+
   render() {
     let imageListContent;
     const { images } = this.props;
