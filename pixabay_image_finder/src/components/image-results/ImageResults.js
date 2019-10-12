@@ -11,6 +11,14 @@ class ImageResults extends Component {
         open: false,
         currentImg: ''
     }
+    
+  handleOpen = img => {
+      this.setState({ open: true, currentImg: img });
+  }
+
+  handleClose = () => {
+    this.setState({ open: false });
+  }
 
   render() {
     let imageListContent;
