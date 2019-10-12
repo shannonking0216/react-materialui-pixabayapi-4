@@ -42,9 +42,20 @@ class ImageResults extends Component {
     } else {
       imageListContent = null;
     }
+
+    const actions = [
+        <FlatButton label="Close" primary={true} onClick={this.handleClose} />
+    ]
+
     return (
     <div>
         {imageListContent}
+        <Dialog 
+          actions={actions}
+          modal={false}
+          open={this.state.open}
+          onRequestClose={this.handleClose}  
+        />
     </div>
     )
   }
